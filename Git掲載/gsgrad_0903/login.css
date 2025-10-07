@@ -1,0 +1,75 @@
+        /* ログインフォーム */
+        .login-container {
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 20px;
+            background: #fff;
+            border: 2px solid #00897B;
+            border-radius: 12px;
+            box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+        }
+        .login-container label {
+            display: block;
+            margin: 12px 0 6px;
+            font-size: 22px;
+            text-align: left;
+        }
+        .login-container input {
+            width: 90%;
+            padding: 10px;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* モーダル */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background: #fff;
+            margin: 10% auto;
+            padding: 25px;
+            width: 360px;
+            border-radius: 15px;
+            box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        .modal-content h3 {
+            margin-top: 0;
+            font-size: 26px;
+            color: #1976D2;
+        }
+        .modal-content label {
+            display: block;
+            margin: 12px 0 6px;
+            text-align: left;
+            font-size: 20px;
+        }
+        .modal-content input {
+            width: 90%;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            right: 12px;
+            top: 8px;
+            font-size: 26px;
+            cursor: pointer;
+            color: #666;
+        }
+        .close:hover {
+            color: #000;
+        }
+
+        /* メッセージ */
+        .msg-error { color: red; font-size: 22px; }
+        .msg-success { color: green; font-size: 22px; }

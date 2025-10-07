@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexiQuest - slide</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button onclick="location.href='index.php'">← HOMEに戻る</button>
+    <!-- onclick は削除、代わりに id を付ける -->
+    <button id="deepBtn">深く学習する</button>
+    <br>
+
+            <h2 id="word"></h2>
+            <p id="meaning"></p>
+            <p id="example-en"></p>
+            <p id="example-jp"></p>
+            <div id="progress"></div>
+
+        <button id="prev">◀</button>
+        <button id="play">再生</button>
+        <button id="next">▶</button>
+
+<!-- 音量 -->
+<progress id ="bar" value="0" max="100"></progress>
+<!-- 速度 -->
+<label for="speed">Speed (seconds):</label>
+<input type="number" id="speed" value="3" min="1" max="10">
+
+
+<button id="generateBtn">生成（少々お待ちください）</button>
+
+
+
+<script defer src="js/slide.js"></script>
+
+<!-- ページロード時にURLからJSでwindow.location.searchを使ってパラメータを受け取り、そのパラメータを今度はget_ws.phpに送ることでデータを得る -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const level = params.get("level");
+    const stage = params.get("stage");
+    const chapter = params.get("chapter");
+
+    window.studyParams = {level, stage, chapter};
+})
+
+</script>
+</body>
+</html>

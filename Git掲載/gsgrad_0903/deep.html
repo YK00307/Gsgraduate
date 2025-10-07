@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexiQuest - deepstudy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button onclick="location.href='index.php'">← HOMEに戻る</button>
+
+    <!-- <n>
+        <p id="question">The doctor ____ a drug.</p>
+        <ul>
+            <li><button onclick="checkAnswer('A')">A. prescribed</button></li>
+            <li><button onclick="checkAnswer('B')">B. emitted</button></li>
+            <li><button onclick="checkAnswer('C')">C. advocated</button></li>
+            <li><button onclick="checkAnswer('D')">D. relied</button></li>
+        </ul>
+        <p id="result"></p>
+    </main>header><h1>深く学習</h1></header>
+    <mai -->
+    <div id="deep-card">
+        <div id="mode-switch">
+            <button id="btn-mcq">Multiple Choice</button>
+            <button id="btn-fill">Fill in the blank</button>
+        </div>
+        <!-- ここに質問がくる -->
+        <div id="question"></div>
+
+        <!-- 記述式の回答欄が来るが最初は非表示 -->
+        <input type="text" id="answerInput" placeholder="Type your Answer" style="display:none;">
+
+        <!-- 選択式の選択肢が表示されるが最初は非表示 -->
+        <div id="choices" style="display:none;"></div>
+
+        <!-- 正解不正解の結果を表示する。最初は非表示-->
+        <div id="feedback" style="display:none;"></div>
+
+        <!-- 警告を表示する。最初は非表示 -->
+        <div id="warning" style="color: red; display:none;"></div>
+
+        <!-- 操作用ボタン -->
+        <button id="checkBtn">こたえる</button>
+        <button id="masterBtn">覚えた</button>
+        <button id="nextBtn">次の単語へ</button>
+        <button id="backBtn">動画に戻る</button>
+
+
+        <div id="feedback" style="display:none; margin-top:10px; font-weight:bold;"></div>
+        <div id="warning" style="display:none; margin-top:5px; color:red; font-weight:bold;"></div>
+
+
+    </div>
+    <script src="js/deep.js"></script>
+<script>
+  console.log("deep.html が読み込まれた！");
+</script>
+
+</body>
+</html>

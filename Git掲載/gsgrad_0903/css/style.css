@@ -1,0 +1,84 @@
+/* 共通ベース */
+body {
+  background-color: #F5F3EF;  /* ベージュ寄りホワイト */
+  font-family: "Segoe UI", "Hiragino Sans", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 30px;
+  writing-mode: horizontal-tb;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.table-container{
+    display: flex;
+    justify-content: center;
+    writing-mode: horizontal-tb;
+}
+
+#ranking table{
+    border-collapse: collapse;
+    text-align: center;
+}
+#ranking th, #ranking td{
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+#ranking th {
+  writing-mode: horizontal-tb !important;
+}
+
+
+/* 見出し */
+h1, h2, h3 {
+  color: #1976D2; /* 青系で見出しを強調 */
+  border-left: 5px solid #00897B; /* 左線でアクセント */
+  padding-left: 8px;
+}
+
+/* ボタン */
+button {
+  background-color: white;
+  border: 2px solid #1976D2; /* 青 */
+  color: #1976D2;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  background-color: #1976D2;
+  color: white;
+}
+
+/* カード (ランキング, History, Timeline投稿用) */
+.card {
+  background-color: #fff;
+  border: 1px solid #00897B; /* 青緑枠 */
+  border-radius: 10px;
+  padding: 15px;
+  margin: 12px 0;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* フッターナビ */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 2px solid #00897B;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  text-align: center;
+  padding: 10px;
+}
+footer button {
+  flex: 1;
+  margin: 0 6px;
+}

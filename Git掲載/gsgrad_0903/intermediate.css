@@ -1,0 +1,143 @@
+/* 共通ベース */
+body {
+  background-color: #F5F3EF;
+  font-family: "Segoe UI", "Hiragino Sans", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* 見出し */
+h1, h2, h3 {
+  color: #1976D2;
+  border-left: 5px solid #00897B;
+  padding-left: 8px;
+  text-align: left;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 900px;
+}
+
+/* コンテナ */
+#content {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto 100px auto;
+  text-align: left;
+}
+
+/* カード風セクション */
+.section {
+  background: #fff;
+  border: 1px solid #00897B;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ファイルアップロード */
+input[type="file"] {
+  display: block;
+  margin: 10px auto 20px auto;
+  font-size: 16px;
+}
+
+/* テキストエリア */
+textarea {
+  width: 80%;
+  min-height: 120px;
+  max-width: 500px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  box-sizing: border-box;
+  margin-top: 10px;
+  display: block;
+  align-items: center;
+}
+
+
+#inputText, #outputArea {
+    display: block;        /* ブロック要素（デフォルトだが明示しておく） */
+    width: 60%;            /* 横幅を制御（例: 画面の60%） */
+    margin: 20px auto;     /* 上下20px、左右は自動で中央寄せ */
+    text-align: left;      /* 中の文字は左揃えに */
+}
+
+
+/* .inputText {
+display: block;
+margin: 20px auto;
+text-align: left;
+width: 55%;
+} */
+
+/* 英文表示欄
+#outputArea, .output-box {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  white-space: pre-wrap;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 600px;
+} */
+
+/* ボタン */
+button {
+  background-color: white;
+  border: 2px solid #1976D2;
+  color: #1976D2;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 6px;
+}
+button:hover {
+  background-color: #1976D2;
+  color: white;
+}
+
+/* 音声プレイヤー＆録音 */
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+.audio-controls button {
+  margin: 5px;
+}
+audio {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* フッターナビ */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 2px solid #00897B;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+footer button {
+  flex: 1;
+  margin: 0 6px;
+}

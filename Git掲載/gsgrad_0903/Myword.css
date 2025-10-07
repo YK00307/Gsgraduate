@@ -1,0 +1,101 @@
+.word-card {
+  width: 200px;
+  height: 120px;
+  perspective: 1000px;
+  margin: 10px;
+  display: flex;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+#mywordContainer{
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 100px;
+}
+
+.word-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front {
+  background: #fefefe;
+}
+
+.card-back {
+  background: #f0f0f0;
+  transform: rotateY(180deg);
+  flex-direction: column;
+}
+
+.detail-btn {
+  margin-top: 10px;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+/* 
+/* モーダル */
+
+#wordModal {
+  position: fixed; /* 画面全体に固定 */
+  top: 0;
+  left: 0;
+  width: 100vw;    /* ビューポート幅いっぱい */
+  height: 100vh;   /* ビューポート高さいっぱい */
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景（任意） */
+  overflow-y: auto; /* 内容が多い場合は縦スクロール可能 */
+  z-index: 9999;    /* 他の要素より前面に表示 */
+  display: block;   /* jsでのdisplay切替に対応 */
+  box-sizing: border-box;
+  padding: 20px;    /* 適宜内側マージン付ける */
+  display: none;
+}
+
+/* モーダル内のコンテンツエリアが幅を制御 */
+#wordModal > .modal-content {
+  background-color: white;
+  margin: 0 auto;
+  min-height: 100vh; /* 画面高さいっぱい */
+  padding: 15px;
+  border-radius: 4px;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  width: 900px;
+}
+
+
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}

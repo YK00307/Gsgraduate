@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>My単語帳</title>
+  <link rel="stylesheet" href="Myword.css">
+</head>
+<body>
+
+<h2>📖 My単語帳</h2>
+<br>
+<h3>精読モードで登録された単語がここに表示されます！</h3>
+
+<!-- My単語帳コンテナ -->
+<div id="mywordContainer"></div>
+
+<!-- 新規追加ボタン -->
+<!-- <button id="addBtn">＋ 新規追加</button> -->
+
+<!-- 新規追加モーダル
+<div id="addModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="addClose">&times;</span>
+    <h2>新しい単語を追加</h2>
+    <input type="text" id="addWordInput" placeholder="単語を入力">
+    <button id="createBtn">作成</button>
+  </div>
+</div> -->
+
+<!-- 詳細モーダル -->
+<div id="wordModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="detailClose">&times;</span>
+    <h2 id="modalWord"></h2>
+    <p><b>短い意味:</b> <span id="modalShortMeaning"></span></p>
+    <p><b>意味:</b> <span id="modalMeaning"></span></p>
+    <p><b>例文:</b> <span id="modalSentence"></span></p>
+    <button id="addToMyWordsBtn">My単語帳に追加</button>
+    <button id="markLearnedBtn">覚えた！</button>
+  </div>
+</div>
+
+<footer>
+  <nav>
+    <a href="index.php">HOME</a>
+    <a href="study.php">VOCAB</a>
+    <a href="intermediate.html">精読</a>
+    <a href="history.php">HISTORY</a>
+    <a href="timeline.php">TIMELINE</a>
+  </nav>
+</footer>
+
+<script src="Myword.js"></script>
+</body>
+</html>
